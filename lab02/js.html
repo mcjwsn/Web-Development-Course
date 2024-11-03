@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Hello world")
+
+        let a = 5
+        let b = 10
+
+        let c = a + b
+
+        const d = 18;
+
+        var e = 5;
+
+        //console.log(d)
+
+        let f = true
+
+        //if(a<b){console.log("a < b")}
+
+        let g = 1
+        let h = true
+
+        //if(g==h){console.log("g jest rowne h")}
+        // === sprawdza tez typ, == plytkie
+        // javascript equality chart
+
+        //for(let i=0;i<5;i++){console.log(i)}
+
+        const student = {
+            imie: "Jan",
+            wiek: 12
+        }
+
+        student.zawod = "programista"
+
+        const x = student
+        x.zawod = "dziennikarz"
+        x["zawod"] = "Nauczyciel"
+        x["background-color"] = "red";
+
+        //console.log(student)
+
+        let a1 = 5
+        let a2 = 4
+
+        let a3 = Math.max(a1,a2)
+        // let a4 = Math.min(a1,a2)
+
+        // let a6 = 5.45; console.log(Math.round(a6))
+        // Math.PI; Math.Floor ; Math.Ceil
+        //console.log(a3)
+
+        
+            // console.log(T)
+            // console.log(T[1])
+            // console.log(T.length)
+        
+        // T.push(30)
+        // console.log(T)
+        // const zkonca = T.pop()
+        // console.log(zkonca)
+        // const zPoczatku = T.shift()// zabieramy z poczatku
+        // T.unshift(21) // dodajemy na poczatek
+
+        // function sum(a,b)
+        // {
+        //     return a + b;
+        // }
+
+        // const c1 = 8
+        // const c2 = 10
+        // const c3 = sum(c1,c2)
+        // console.log(c3)
+
+        // const roznica = (a,b) =>
+        // {
+        //     return a - b
+        // }
+        // console.log(roznica(10,9))
+        /*
+            fun bedzie kalkulatorem ktory zaklamuje wartosci a i b i zwieksza wartosci a b o 1
+         */
+        // function fun(a,b,op){
+        //     a+=1
+        //     b+=1
+        //     return op(a,b)
+        // }
+
+        // const c5 = fun(5,5,(x,y)=>{
+        //     return x+y
+        // })
+
+        // const c6 = fun(1,1,function(x,y){return x*y})
+        // console.log(c6)
+
+
+        const T = [4,8,5,12,10]
+        console.log(T)
+        // const T2 = T.filter((x)=>{
+        //         return x>10
+        // })
+        // console.log(T2)
+
+        // js array cheatsheet
+        const T2 = T.map((x)=> {return x*2})
+        console.log(T2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .klasa{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .klasa2{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id ="parent"></div>
+    <button id="bt1">
+        Kliknij mnie
+    </button>
+    <script>
+        // const element = document.getElementById("test")
+        // element.innerText = "<b>Goodbye<b>"
+        // element.innerHTML = <b><i>Goodbye</i></b>
+
+        const parentDiv = document.getElementById("parent")
+        parentDiv.classList = "klasa klasa2"
+        parentDiv.style.color = "blue"
+        parentDiv.style["font-size"] = "24px"
+        parentDiv.style.fontSize = "38px"
+        parentDiv.style.backgroundColor = "green"
+
+        //const newChild = document.createElement("div")
+        //newChild.classList = "klasa"
+        //parentDiv.appendChild(newChild)
+
+        // setTimeout(()=>{
+        //     parentDiv.appendChild(newChild)
+        // },3000)
+
+        const bt1 = document.getElementById("bt1")
+
+        bt1.addEventListener("click",(e)=>{
+            const newChild = document.createElement("div")
+            newChild.classList = "klasa"
+            parentDiv.appendChild(newChild)
+
+            //console.log(e)
+        })
+        // nie dalo sie tutaj nadążyć
+        // zostalo jakeis15min
+    </script>
+</body>
+</html>
