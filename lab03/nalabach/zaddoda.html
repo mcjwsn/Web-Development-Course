@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todos</title>
+    <style>
+        .todo {
+            margin: 10px 0;
+            color: black;
+            font-size: 1em;
+            display: flex;
+        }
+
+        .square {
+            width: 20px;
+            height: 20px;
+        }
+
+        .completed {
+            background-color: green;
+        }
+
+        .not-completed {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>List Of Todos</h1>
+    <div id="mainTODO">Klik</div>
+    <div id="todos"></div>
+
+    <script>
+        const mainTODO = document.getElementById("mainTODO");
+        const todosDiv = document.getElementById("todos");
+
+        fetch('https://dummyjson.com/todos')
+            .then((res) => res.json())
+            .then((data) => {
+                const todos = data.todos;
+
+                todos.forEach(todo => {
+                    const todoDiv = document.createElement("div");
+                    todoDiv.classList.add("todo");
+
+                    const square = document.createElement("div");
+                    square.classList.add("square");
+
+                    if (todo.completed) {
+                        square.classList.add("completed");
+                    } else {
+                        square.classList.add("not-completed");
+                    }
+
+                    square.addEventListener("click", function() {
+                        if (!todo.completed) { 
+                            square.classList.remove("not-completed");
+                            square.classList.add("completed");
+                            todo.completed = true; 
+                        }
+                        else{
+                            square.classList.remove("completed");
+                            square.classList.add("not-completed");
+                            todo.completed = false;
+                        }
+                    });
+
+                    const todoText = document.createElement("span");
+                    todoText.textContent = todo.id + ". " + todo.todo;
+
+                    todoDiv.appendChild(square);
+                    todoDiv.appendChild(todoText);
+
+                    todosDiv.appendChild(todoDiv);
+
+                    todoDiv.addEventListener("click", function() {
+                        mainTODO.textContent = "TODO: " + todo.todo +", Completed: " + (todo.completed ? "Yes" : "No") + ", User ID: " + todo.userId;
+                    });
+                });
+            });
+    </script>
+</body>
+</html>
+
