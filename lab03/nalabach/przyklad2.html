@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <style>
+        .quote {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        .quote:hover {
+            background-color: #e0e0e0;
+        }
+
+        #mainQuote {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>quotes</h1>
+    <div id="mainQuote">Click on a quote to display it here</div>
+    <div id="quotes"></div>
+
+    <script>
+        let mainQuote = document.getElementById("mainQuote");
+        let quotesDiv = document.getElementById("quotes");
+
+        fetch('https://dummyjson.com/quotes')
+            .then((res) => res.json())
+            .then((data) => {
+                const T = data.quotes;
+
+                T.forEach(element => {
+                    const quote = document.createElement("div");
+                    quote.classList.add("quote");
+                    quote.innerHTML = element.id + " " + element.author
+                    quotesDiv.appendChild(quote);
+
+                    quote.addEventListener("click", () => {
+                        mainQuote.innerHTML = element.quote;
+                    });
+                });
+            });
+    </script>
+</body>
+</html>
