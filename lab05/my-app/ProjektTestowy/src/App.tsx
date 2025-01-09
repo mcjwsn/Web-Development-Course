@@ -7,6 +7,9 @@ import NowyLicznik from './components/liczniki/NowyLicznik';
 import Formularz from './components/formularze/Formularz';
 import Haslo from './components/formularze/Haslo';
 import Logowanie from './components/formularze/Logowanie';
+import Ternary from './components/inne/Ternary';
+import Aktualizacja from './components/inne/Aktualizacja';
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
       {/*<Formularz></Formularz>*/}
       {/*<Haslo></Haslo>*/}
       {/*<Logowanie></Logowanie>*/}
+      {/*<Ternary></Ternary>*/}
+      <Aktualizacja></Aktualizacja>
     </div>
   );}
 
