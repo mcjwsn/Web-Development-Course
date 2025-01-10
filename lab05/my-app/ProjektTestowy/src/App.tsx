@@ -14,6 +14,7 @@ import StudentManager from './components/studenci/StudentManager';
 import Timer from './components/efekty/Timer'
 import Licznik2 from './components/efekty/Licznik2'
 import Tytuł from './components/efekty/Tytuł'
+import Komentarze from './components/produkty/Komentarze';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
       {/*<Licznik2></Licznik2>*/}
       {/*<Tytuł></Tytuł>*/}
       {/*<Timer></Timer>*/}
-      
+      <Komentarze></Komentarze>
     </div>
   );}
 
