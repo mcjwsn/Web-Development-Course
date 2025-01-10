@@ -11,6 +11,9 @@ import Ternary from './components/inne/Ternary';
 import Aktualizacja from './components/inne/Aktualizacja';
 import Studenci from './components/studenci/Studenci';
 import StudentManager from './components/studenci/StudentManager';
+import Timer from './components/efekty/Timer'
+import Licznik2 from './components/efekty/Licznik2'
+import Tytuł from './components/efekty/Tytuł'
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
       {/*<Aktualizacja></Aktualizacja>*/}
       {/*<Studenci></Studenci>*/}
       {/*<StudentManager></StudentManager>*/}
+      {/*<Licznik2></Licznik2>*/}
+      {/*<Tytuł></Tytuł>*/}
+      {/*<Timer></Timer>*/}
+      
     </div>
   );}
 
