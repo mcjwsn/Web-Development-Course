@@ -1,29 +1,22 @@
 import React, { useState } from 'react'
 
-
-interface Student{
-    imie: string,
-    nazwisko: string,
-    rocznik: number
-}
-
 interface Addition{
-    addStudent:(student: Student)=>void;
+    addStudent:(imie:string,nazwisko:string,rocznik:number)=>void;
 }
 
 const Dodawanie: React.FC<Addition> = ({ addStudent }) =>{
     
     const [imie,setImie] = useState('');
     const [nazwisko,setNazwisko] = useState('');
-    const [rocznik, setRocznik] = useState<number | ''>(2004);
+    const [rocznik, setRocznik] = useState<number>(2004);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
-        setRocznik(inputValue === '' ? '' : parseInt(inputValue, 10));
+        setRocznik(parseInt(inputValue, 10));
       };
     
     const add= () => {
-        if (!imie || !nazwisko || rocznik < 1900 || rocznik > 2025) {
+        if (!imie || imie ==' ' || !nazwisko || nazwisko == ' ' || rocznik < 1900 || rocznik > 2025) {
             alert("Proszę wypełnić wszystkie pola poprawnymi danymi!");
             return;
         }

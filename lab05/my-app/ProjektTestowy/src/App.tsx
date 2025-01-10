@@ -25,7 +25,7 @@ function App() {
       {/*<Ternary></Ternary>*/}
       {/*<Aktualizacja></Aktualizacja>*/}
       {/*<Studenci></Studenci>*/}
-      <StudentManager></StudentManager>
+      {/*<StudentManager></StudentManager>*/}
     </div>
   );}
 
