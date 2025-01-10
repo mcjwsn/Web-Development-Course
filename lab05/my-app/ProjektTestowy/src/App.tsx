@@ -9,7 +9,8 @@ import Haslo from './components/formularze/Haslo';
 import Logowanie from './components/formularze/Logowanie';
 import Ternary from './components/inne/Ternary';
 import Aktualizacja from './components/inne/Aktualizacja';
-
+import Studenci from './components/studenci/Studenci';
+import StudentManager from './components/studenci/StudentManager';
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
       {/*<Haslo></Haslo>*/}
       {/*<Logowanie></Logowanie>*/}
       {/*<Ternary></Ternary>*/}
-      <Aktualizacja></Aktualizacja>
+      {/*<Aktualizacja></Aktualizacja>*/}
+      {/*<Studenci></Studenci>*/}
+      <StudentManager></StudentManager>
     </div>
   );}
 
