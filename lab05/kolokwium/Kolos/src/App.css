@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tree {
+    position: relative;
+    width: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .tree-top {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid green;
+    margin: 0 auto;
+  }
+  
+  .tree-body {
+    width: 100px;
+    height: 100%;
+    background-color: green;
+  }
+  
+  input[type="number"], input[type="color"] {
+    margin: 10px;
+  }
+  
